@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "types": [
+      "mocha",
+      "node",
+      "webdriverio/sync",
+      "@wdio/jasmine-framework"
+    ]
+  },
+  "include": [
+    "./test/**/*.ts",
+  ]
+}
