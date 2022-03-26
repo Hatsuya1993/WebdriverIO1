@@ -26,4 +26,8 @@ describe('Home Page Test', () => {
         expect(await homePage.home.isDisplayed()).to.be.true
     })
 
+    it('Shop is displayed', async () => {
+        expect(await homePage.shop.isDisplayed()).to.be.true
+    })
+
 })
