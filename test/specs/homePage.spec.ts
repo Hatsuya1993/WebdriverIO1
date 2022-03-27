@@ -34,4 +34,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getBanner().isDisplayed()).to.be.true
     })
 
+    it('Name is displayed', async () => {
+        expect(await homePage.getName().isDisplayed()).to.be.true
+    })
+
 })
