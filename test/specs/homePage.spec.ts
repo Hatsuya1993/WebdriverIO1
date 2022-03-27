@@ -3,7 +3,7 @@ import { expect } from 'chai'
 
 describe('Home Page Test', () => { 
 
-    let homePage : HomePage
+    let homePage : HomePage = 
 
     beforeEach( async () => {
         homePage = new HomePage()
@@ -15,19 +15,23 @@ describe('Home Page Test', () => {
     })
 
     it('Check navbar is displayed', async () => {
-        expect(await homePage.navbar.isDisplayed()).to.be.true
+        expect(await homePage.getNavBar().isDisplayed()).to.be.true
     })
 
     it('ProtoCommerce is displayed', async () => {
-        expect(await homePage.protoCommerce.isDisplayed()).to.be.true
+        expect(await homePage.getProtoCommerce().isDisplayed()).to.be.true
     })
 
     it('Home is displayed', async () => {
-        expect(await homePage.home.isDisplayed()).to.be.true
+        expect(await homePage.getHome().isDisplayed()).to.be.true
     })
 
     it('Shop is displayed', async () => {
-        expect(await homePage.shop.isDisplayed()).to.be.true
+        expect(await homePage.getShop().isDisplayed()).to.be.true
+    })
+
+    it('Banner is displayed', async () => {
+        expect(await homePage.getBanner().isDisplayed()).to.be.true
     })
 
 })

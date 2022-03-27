@@ -1,12 +1,14 @@
 export const config: WebdriverIO.Config = {
-  specs: ["./test/**/*.ts"],
+  runner: 'local',
+  specs: ["./test/specs/**/*.ts"],
   capabilities: [
     {
       browserName: "chrome",
       maxInstances: 1,
     },
   ],
-  framework: "Mocha",
+  logLevel: 'info',
+  framework: "mocha",
   jasmineOpts: {
     defaultTimeoutInterval: 120000,
   },
