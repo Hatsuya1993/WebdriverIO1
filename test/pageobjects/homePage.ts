@@ -6,6 +6,7 @@ class HomePage {
     private readonly shop : string = "=Shop"
     private readonly banner : string = ".jumbotron"
     private readonly name : string = "label=Name"
+    private readonly nameInput : string = "[name='name']"
 
     constructor(private readonly $main = $("body")) {
         this.navbar = this.$main.$(this.navbar)
@@ -14,6 +15,7 @@ class HomePage {
         this.shop = this.$main.$(this.shop)
         this.banner = this.$main.$(this.banner)
         this.name = this.$main.$(this.name)
+        this.nameInput = this.$main.$(this.nameInput)
     }
     navigateTo() : void {
         return browser.url("https://rahulshettyacademy.com/angularpractice/")
@@ -35,6 +37,9 @@ class HomePage {
     }
     getName() : string {
         return this.name
+    }
+    getNameInput() : string {
+        return this.nameInput
     }
 }
 

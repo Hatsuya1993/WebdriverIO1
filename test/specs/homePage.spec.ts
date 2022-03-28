@@ -38,4 +38,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getName().isDisplayed()).to.be.true
     })
 
+    it('Name input is displayed', async () => {
+        expect(await homePage.getNameInput().isDisplayed()).to.be.true
+    })
+
 })
