@@ -8,7 +8,7 @@ class HomePage {
     private readonly name : string = "label=Name"
     private readonly nameInput : string = "[name='name']"
     private readonly email : string = "label=Email"
-
+    private readonly emailInput : string = "[name='email']"
 
     constructor(private readonly $main = $("body")) {
         this.navbar = this.$main.$(this.navbar)
@@ -19,6 +19,7 @@ class HomePage {
         this.name = this.$main.$(this.name)
         this.nameInput = this.$main.$(this.nameInput)
         this.email = this.$main.$(this.email)
+        this.emailInput = this.$main.$(this.emailInput)
     }
     navigateTo() : void {
         return browser.url("https://rahulshettyacademy.com/angularpractice/")
@@ -46,6 +47,9 @@ class HomePage {
     }
     getEmail() : string {
         return this.email
+    }
+    getEmailInput() : string {
+        return this.emailInput
     }
 }
 
