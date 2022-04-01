@@ -50,4 +50,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getEmailInput().isDisplayed()).to.be.true
     })
 
+    it('Password is displayed', async () => {
+        expect(await homePage.getPassword().isDisplayed()).to.be.true
+    })
+
 })
