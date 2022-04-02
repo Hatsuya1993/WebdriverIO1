@@ -3,7 +3,7 @@ import { expect } from 'chai'
 
 describe('Home Page Test', () => { 
 
-    let homePage : HomePage = 
+    let homePage : HomePage
 
     beforeEach( async () => {
         homePage = new HomePage()
@@ -52,6 +52,10 @@ describe('Home Page Test', () => {
 
     it('Password is displayed', async () => {
         expect(await homePage.getPassword().isDisplayed()).to.be.true
+    })
+
+    it('Password input is displayed', async () => {
+        expect(await homePage.getPasswordInput().isDisplayed()).to.be.true
     })
 
 })
