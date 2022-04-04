@@ -1,72 +1,72 @@
 class HomePage {
 
-    private readonly navbar : string = ".navbar"
-    private readonly protoCommerce : string = "=ProtoCommerce"
-    private readonly home : string = "=Home"
-    private readonly shop : string = "=Shop"
-    private readonly banner : string = ".jumbotron"
-    private readonly name : string = "label=Name"
-    private readonly nameInput : string = "[name='name']"
-    private readonly email : string = "label=Email"
-    private readonly emailInput : string = "[name='email']"
-    private readonly password : string = "label=Password"
-    private readonly passwordInput : string = "[placeholder='Password']"
-    private readonly checkBox : string = "label=Check me out if you Love IceCreams!"
+    private readonly navbar : WebdriverIO.Element
+    private readonly protoCommerce : WebdriverIO.Element
+    private readonly home : WebdriverIO.Element
+    private readonly shop : WebdriverIO.Element
+    private readonly banner : WebdriverIO.Element
+    private readonly name : WebdriverIO.Element
+    private readonly nameInput : WebdriverIO.Element
+    private readonly email : WebdriverIO.Element
+    private readonly emailInput : WebdriverIO.Element
+    private readonly password : WebdriverIO.Element
+    private readonly passwordInput : WebdriverIO.Element
+    private readonly checkBox : WebdriverIO.Element
     private readonly checkBoxText : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
-        this.navbar = this.$main.$(this.navbar)
-        this.protoCommerce = this.$main.$(this.protoCommerce);
-        this.home = this.$main.$(this.home)
-        this.shop = this.$main.$(this.shop)
-        this.banner = this.$main.$(this.banner)
-        this.name = this.$main.$(this.name)
-        this.nameInput = this.$main.$(this.nameInput)
-        this.email = this.$main.$(this.email)
-        this.emailInput = this.$main.$(this.emailInput)
-        this.password = this.$main.$(this.password)
-        this.passwordInput = this.$main.$(this.passwordInput)
-        this.checkBox = this.$main.$(this.checkBox)
+        this.navbar = this.$main.$(".navbar")
+        this.protoCommerce = this.$main.$("=ProtoCommerce");
+        this.home = this.$main.$("=Home")
+        this.shop = this.$main.$("=Shop")
+        this.banner = this.$main.$(".jumbotron")
+        this.name = this.$main.$("label=Name")
+        this.nameInput = this.$main.$("[name='name']")
+        this.email = this.$main.$("label=Email")
+        this.emailInput = this.$main.$("[name='email']")
+        this.password = this.$main.$("label=Password")
+        this.passwordInput = this.$main.$("[placeholder='Password']")
+        this.checkBox = this.$main.$("label=Check me out if you Love IceCreams!")
         this.checkBoxText = this.$main.$(".form-check-input#exampleCheck1")
     }
 
     navigateTo() : void {
         return browser.url("https://rahulshettyacademy.com/angularpractice/")
     }
-    getNavBar() : string {
+    getNavBar() : WebdriverIO.Element {
         return this.navbar
     }
-    getProtoCommerce() : string {
+    getProtoCommerce() : WebdriverIO.Element {
         return this.protoCommerce
     }
-    getHome() : string {
+    getHome() : WebdriverIO.Element {
         return this.home
     }
-    getShop() : string {
+    getShop() : WebdriverIO.Element {
         return this.shop
     }
-    getBanner() : string {
+    getBanner() : WebdriverIO.Element {
         return this.banner
     }
-    getName() : string {
+    getName() : WebdriverIO.Element {
         return this.name
     }
-    getNameInput() : string {
+    getNameInput() : WebdriverIO.Element {
         return this.nameInput
     }
-    getEmail() : string {
+    getEmail() : WebdriverIO.Element {
         return this.email
     }
-    getEmailInput() : string {
+    getEmailInput() : WebdriverIO.Element {
         return this.emailInput
     }
-    getPassword() : string {
+    getPassword() : WebdriverIO.Element {
         return this.password
     }
-    getPasswordInput() : string {
+    getPasswordInput() : WebdriverIO.Element {
         return this.passwordInput
     }
-    getCheckbox() : string {
+    getCheckbox() : WebdriverIO.Element {
         return this.checkBox
     }
     getCheckboxText() : WebdriverIO.Element {
