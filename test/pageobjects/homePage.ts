@@ -12,8 +12,9 @@ class HomePage {
     private readonly password : string = "label=Password"
     private readonly passwordInput : string = "[placeholder='Password']"
     private readonly checkBox : string = "label=Check me out if you Love IceCreams!"
+    private readonly checkBoxText : WebdriverIO.Element
 
-    constructor(private readonly $main = $("body")) {
+    constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(this.navbar)
         this.protoCommerce = this.$main.$(this.protoCommerce);
         this.home = this.$main.$(this.home)
@@ -26,7 +27,9 @@ class HomePage {
         this.password = this.$main.$(this.password)
         this.passwordInput = this.$main.$(this.passwordInput)
         this.checkBox = this.$main.$(this.checkBox)
+        this.checkBoxText = this.$main.$(".form-check-input#exampleCheck1")
     }
+
     navigateTo() : void {
         return browser.url("https://rahulshettyacademy.com/angularpractice/")
     }
@@ -65,6 +68,9 @@ class HomePage {
     }
     getCheckbox() : string {
         return this.checkBox
+    }
+    getCheckboxText() : WebdriverIO.Element {
+        return this.checkBoxText
     }
 }
 
