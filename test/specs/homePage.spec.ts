@@ -66,4 +66,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getCheckboxText().isDisplayed()).to.be.true
     })
 
+    it('Checkbox gender should be displayed', async () => {
+        expect(await homePage.getGender().isDisplayed()).to.be.true
+    })
+
 })
