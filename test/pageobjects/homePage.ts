@@ -14,6 +14,7 @@ class HomePage {
     private readonly checkBox : WebdriverIO.Element
     private readonly checkBoxText : WebdriverIO.Element
     private readonly gender : WebdriverIO.Element
+    private readonly genderText : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -30,6 +31,7 @@ class HomePage {
         this.checkBox = this.$main.$("label=Check me out if you Love IceCreams!")
         this.checkBoxText = this.$main.$(".form-check-input#exampleCheck1")
         this.gender = this.$main.$("#exampleFormControlSelect1")
+        this.genderText = this.$main.$("label=Gender")
     }
 
     navigateTo() : void {
@@ -76,6 +78,9 @@ class HomePage {
     }
     getGender() : WebdriverIO.Element {
         return this.gender
+    }
+    getGenderText() : WebdriverIO.Element {
+        return this.genderText
     }
 }
 
