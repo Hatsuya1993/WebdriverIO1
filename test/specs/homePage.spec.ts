@@ -74,4 +74,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getGenderText().isDisplayed()).to.be.true
     })
 
+    it('Employment status should be displayed', async () => {
+        expect(await homePage.getEmploymentStatus().isDisplayed()).to.be.true
+    })
+
 })
