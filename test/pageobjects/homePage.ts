@@ -19,6 +19,7 @@ class HomePage {
     private readonly studentCheckBox : WebdriverIO.Element
     private readonly studentText : WebdriverIO.Element
     private readonly employedCheckBox : WebdriverIO.Element
+    private readonly employedText : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -40,6 +41,7 @@ class HomePage {
         this.studentCheckBox = this.$main.$("#inlineRadio1")
         this.studentText = this.$main.$("label=Student")
         this.employedCheckBox = this.$main.$("#inlineRadio2")
+        this.employedText = this.$main.$("label=Employed")
     }
 
     navigateTo() : void {
@@ -101,6 +103,9 @@ class HomePage {
     }
     getEmployedCheckBox() : WebdriverIO.Element {
         return this.employedCheckBox
+    }
+    getEmployedText() : WebdriverIO.Element {
+        return this.employedText
     }
 }
 

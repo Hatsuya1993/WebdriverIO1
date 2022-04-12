@@ -90,5 +90,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getEmployedCheckBox().isDisplayed()).to.be.true
     })
 
+    it('Employed text should be displayed', async () => {
+        expect(await homePage.getEmployedText().isDisplayed()).to.be.true
+    })
 
 })
