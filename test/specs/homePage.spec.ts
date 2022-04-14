@@ -98,4 +98,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getEntrepreneurCheckBox().isDisplayed()).to.be.true
     })
 
+    it('Entrepreneur text should be displayed', async () => {
+        expect(await homePage.getEntrepreneurText().isDisplayed()).to.be.true
+    })
+
 })
