@@ -23,6 +23,7 @@ class HomePage {
     private readonly entrepreneurCheckBox : WebdriverIO.Element
     private readonly entrepreneurText : WebdriverIO.Element
     private readonly dateOfBirthText : WebdriverIO.Element
+    private readonly dateOfBirth : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -48,6 +49,7 @@ class HomePage {
         this.entrepreneurCheckBox = this.$main.$("#inlineRadio3")
         this.entrepreneurText = this.$main.$("label=Entrepreneur (disabled)")
         this.dateOfBirthText = this.$main.$("label=Date of Birth")
+        this.dateOfBirth = this.$main.$("[name='bday']")
     }
 
     navigateTo() : void {
@@ -119,8 +121,11 @@ class HomePage {
     getEntrepreneurText() : WebdriverIO.Element {
         return this.entrepreneurText
     }
-    getDateOfBirth() : WebdriverIO.Element {
+    getDateOfBirthText() : WebdriverIO.Element {
         return this.dateOfBirthText
+    }
+    getDateOfBirth() : WebdriverIO.Element {
+        return this.dateOfBirth
     }
 }
 

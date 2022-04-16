@@ -102,7 +102,11 @@ describe('Home Page Test', () => {
         expect(await homePage.getEntrepreneurText().isDisplayed()).to.be.true
     })
 
-    it('Date of brith text should be displayed', async () => {
+    it('Date of birth text should be displayed', async () => {
+        expect(await homePage.getDateOfBirthText().isDisplayed()).to.be.true
+    })
+
+    it('Date of birth should be displayed', async () => {
         expect(await homePage.getDateOfBirth().isDisplayed()).to.be.true
     })
 
