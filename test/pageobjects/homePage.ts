@@ -24,6 +24,7 @@ class HomePage {
     private readonly entrepreneurText : WebdriverIO.Element
     private readonly dateOfBirthText : WebdriverIO.Element
     private readonly dateOfBirth : WebdriverIO.Element
+    private readonly submitButton : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -50,6 +51,7 @@ class HomePage {
         this.entrepreneurText = this.$main.$("label=Entrepreneur (disabled)")
         this.dateOfBirthText = this.$main.$("label=Date of Birth")
         this.dateOfBirth = this.$main.$("[name='bday']")
+        this.submitButton = this.$main.$("[type='submit']")
     }
 
     navigateTo() : void {
@@ -126,6 +128,9 @@ class HomePage {
     }
     getDateOfBirth() : WebdriverIO.Element {
         return this.dateOfBirth
+    }
+    getSubmitButton() : WebdriverIO.Element {
+        return this.submitButton
     }
 }
 

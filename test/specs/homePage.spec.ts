@@ -110,4 +110,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getDateOfBirth().isDisplayed()).to.be.true
     })
 
+    it('Submit button should be displayed', async () => {
+        expect(await homePage.getSubmitButton().isDisplayed()).to.be.true
+    })
+
 })
