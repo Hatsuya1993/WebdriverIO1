@@ -114,4 +114,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getSubmitButton().isDisplayed()).to.be.true
     })
 
+    it('Two binding input should be displayed', async () => {
+        expect(await homePage.getTwoWay().isDisplayed()).to.be.true
+    })
+
 })
