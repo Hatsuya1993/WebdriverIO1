@@ -118,4 +118,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getTwoWay().isDisplayed()).to.be.true
     })
 
+    it('Banner should be displayed', async () => {
+        expect(await homePage.getBanner().isDisplayed()).to.be.true
+    })
+
 })
