@@ -1,12 +1,16 @@
 import HomePage from '../pageobjects/homePage'
 import { expect } from 'chai'
+import Helpers from '../helpers/helpers'
+import data from '../constants/constants'
 
 describe('Home Page Test', () => { 
 
     let homePage : HomePage
+    let helpers : Helpers
 
     beforeEach( async () => {
         homePage = new HomePage()
+        helpers = new Helpers()
         homePage.navigateTo()
     })
 
@@ -120,6 +124,11 @@ describe('Home Page Test', () => {
 
     it('Banner should be displayed', async () => {
         expect(await homePage.getBanner().isDisplayed()).to.be.true
+    })
+
+    it('Input data should be populated when data is added', async () => {
+        await helpers.addDataInput(data[0].homePage.type, data[0].homePage.data)
+        expect(await homePage.getNameInput().getValue()).to.equal(data[0].homePage.data)
     })
 
 })
