@@ -126,9 +126,14 @@ describe('Home Page Test', () => {
         expect(await homePage.getBanner().isDisplayed()).to.be.true
     })
 
-    it('Input data should be populated when data is added', async () => {
-        await helpers.addDataInput(data[0].homePage.type, data[0].homePage.data)
-        expect(await homePage.getNameInput().getValue()).to.equal(data[0].homePage.data)
+    it('Input name data should be populated when data is added', async () => {
+        await helpers.addDataInput(data[0].homePageName.type, data[0].homePageName.data)
+        expect(await homePage.getNameInput().getValue()).to.equal(data[0].homePageName.data)
+    })
+
+    it('Input email data should be populated when data is added', async () => {
+        await helpers.addDataInput(data[0].homePageEmail.type, data[0].homePageEmail.data)
+        expect(await homePage.getEmailInput().getValue()).to.equal(data[0].homePageEmail.data)
     })
 
 })

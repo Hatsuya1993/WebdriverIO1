@@ -1,9 +1,13 @@
 const data = [
     {
-        "homePage" : {
+        "homePageName" : {
             "type" : "name",
             "data" : "testName"
-        }
+        },
+        "homePageEmail" : {
+            "type" : "email",
+            "data" : "testName"
+        },
     }
 ]
 
