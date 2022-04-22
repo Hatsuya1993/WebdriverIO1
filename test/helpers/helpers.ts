@@ -12,6 +12,9 @@ class Helpers {
             case "email":
                 await this.homePage.getEmailInput().setValue(data)
                 break
+            case "password":
+                await this.homePage.getPasswordInput().setValue(data)
+                break
             default:
                 throw new Error("No such type")
         }

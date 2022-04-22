@@ -136,4 +136,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getEmailInput().getValue()).to.equal(data[0].homePageEmail.data)
     })
 
+    it('Input password data should be populated when data is added', async () => {
+        await helpers.addDataInput(data[0].homePagePassword.type, data[0].homePagePassword.data)
+        expect(await homePage.getPasswordInput().getValue()).to.equal(data[0].homePagePassword.data)
+    })
+
 })

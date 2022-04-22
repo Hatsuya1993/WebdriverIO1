@@ -8,6 +8,10 @@ const data = [
             "type" : "email",
             "data" : "testName"
         },
+        "homePagePassword" : {
+            "type" : "password",
+            "data" : "testName"
+        },
     }
 ]
 
