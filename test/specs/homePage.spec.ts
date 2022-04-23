@@ -2,6 +2,7 @@ import HomePage from '../pageobjects/homePage'
 import { expect } from 'chai'
 import Helpers from '../helpers/helpers'
 import data from '../constants/constants'
+import isSelected from '../../node_modules/webdriverio/build/commands/element/isSelected'
 
 describe('Home Page Test', () => { 
 
@@ -139,6 +140,11 @@ describe('Home Page Test', () => {
     it('Input password data should be populated when data is added', async () => {
         await helpers.addDataInput(data[0].homePagePassword.type, data[0].homePagePassword.data)
         expect(await homePage.getPasswordInput().getValue()).to.equal(data[0].homePagePassword.data)
+    })
+
+    it('Checkbox password data should be populated when data is added', async () => {
+        await homePage.getCheckboxText().click()
+        expect(await homePage.getCheckboxText().isSelected()).to.be.true
     })
 
 })
