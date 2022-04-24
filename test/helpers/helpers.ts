@@ -4,7 +4,7 @@ class Helpers {
 
     private readonly homePage : HomePage = new HomePage()
 
-    async addDataInput(type : String, data : string){
+    async addDataInput(type : string, data : string){
         switch(type){
             case "name":
                 await this.homePage.getNameInput().setValue(data)
@@ -17,6 +17,13 @@ class Helpers {
                 break
             default:
                 throw new Error("No such type")
+        }
+    }
+
+    async addDropdown(type: string, data: number){
+        switch(type){
+            case "gender":
+                await this.homePage.getGender().selectByIndex(data)
         }
     }
 

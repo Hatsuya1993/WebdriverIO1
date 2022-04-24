@@ -147,4 +147,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getCheckboxText().isSelected()).to.be.true
     })
 
+    it('Dropdown select male should be male', async () => {
+        await helpers.addDropdown(data[0].gender.type, data[0].gender.male.index)
+        expect(await homePage.getGender().getValue()).to.equal(data[0].gender.male.data)
+    })
+
 })
