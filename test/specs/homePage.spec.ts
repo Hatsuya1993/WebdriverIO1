@@ -152,4 +152,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getGender().getValue()).to.equal(data[0].gender.male.data)
     })
 
+    it('Dropdown select female should be female', async () => {
+        await helpers.addDropdown(data[0].gender.type, data[0].gender.female.index)
+        expect(await homePage.getGender().getValue()).to.equal(data[0].gender.female.data)
+    })
+
 })
