@@ -157,4 +157,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getGender().getValue()).to.equal(data[0].gender.female.data)
     })
 
+    it('Student checkbox should be checked if selected', async () => {
+        await homePage.getStudentCheckBox().click()
+        expect(await homePage.getStudentCheckBox().isSelected()).to.be.true
+    })
+
 })
