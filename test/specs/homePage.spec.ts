@@ -166,4 +166,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getStudentCheckBox().isSelected()).to.be.true
     })
 
+    it('Employed checkbox should not be checked if not selected', async () => {
+        expect(await homePage.getEmployedCheckBox().isSelected()).to.not.be.true
+    })
+
 })
