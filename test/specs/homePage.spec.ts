@@ -175,4 +175,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getEmployedCheckBox().isSelected()).to.be.true
     })
 
+    it('Entrepreneur checkbox should be disabled', async () => {
+        expect(await homePage.getEntrepreneurCheckBox().isEnabled()).to.not.be.true
+    })
+
 })
