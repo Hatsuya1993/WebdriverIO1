@@ -179,6 +179,10 @@ describe('Home Page Test', () => {
         expect(await homePage.getEntrepreneurCheckBox().isEnabled()).to.not.be.true
     })
 
+    it('Date of birth text should be displayed', async () => {
+        expect(await homePage.getDateOfBirthText().isDisplayed()).to.be.true
+    })
+
     it('Date of birth should be empyty', async () => {
         expect(await homePage.getDateOfBirth().getValue()).to.be.empty
     })
