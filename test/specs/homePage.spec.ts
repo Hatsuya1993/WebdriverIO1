@@ -2,7 +2,6 @@ import HomePage from '../pageobjects/homePage'
 import { expect } from 'chai'
 import Helpers from '../helpers/helpers'
 import data from '../constants/constants'
-import isSelected from '../../node_modules/webdriverio/build/commands/element/isSelected'
 
 describe('Home Page Test', () => { 
 
@@ -185,6 +184,12 @@ describe('Home Page Test', () => {
 
     it('Date of birth should be empyty', async () => {
         expect(await homePage.getDateOfBirth().getValue()).to.be.empty
+    })
+
+    it('Date of birth should be populated with the given data', async () => {
+        await homePage.getDateOfBirth().click()
+        await homePage.getDateOfBirth().setValue('14012022')
+        expect(await homePage.getDateOfBirth().getValue()).to.equal('2022-01-14')
     })
 
 })
