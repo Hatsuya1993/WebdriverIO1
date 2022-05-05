@@ -192,4 +192,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getDateOfBirth().getValue()).to.equal('2022-01-14')
     })
 
+    it('Submit button should be enabled', async () => {
+        expect(await homePage.getSubmitButton().isEnabled()).to.be.true
+    })
+
 })
