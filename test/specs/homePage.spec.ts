@@ -200,4 +200,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getTwoWay().isDisplayed()).to.be.true
     })
 
+    it('Two way binding input should be empty by default', async () => {
+        expect(await homePage.getTwoWay().getValue()).to.equal('')
+    })
+
 })
