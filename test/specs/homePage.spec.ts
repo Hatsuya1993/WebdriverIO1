@@ -204,4 +204,8 @@ describe('Home Page Test', () => {
         expect(await homePage.getTwoWay().getValue()).to.equal('')
     })
 
+    it('Bottom should be displayed', async () => {
+        expect(await homePage.getBottom().isDisplayed()).to.be.true
+    })
+
 })
