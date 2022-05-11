@@ -208,4 +208,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getBottom().isDisplayed()).to.be.true
     })
 
+    it('Bottom should be displaying the correct data', async () => {
+        await homePage.getSubmitButton().click()
+        expect(await homePage.getBottom().getText()).to.equal('Copyright © ProtoCommerce 2018')
+    })
+
 })
