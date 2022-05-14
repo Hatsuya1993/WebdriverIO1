@@ -209,8 +209,12 @@ describe('Home Page Test', () => {
     })
 
     it('Bottom should be displaying the correct data', async () => {
-        await homePage.getSubmitButton().click()
         expect(await homePage.getBottom().getText()).to.equal('Copyright © ProtoCommerce 2018')
+    })
+
+    it('Success message displayed when submit is clicked', async () => {
+        await homePage.getSubmitButton().click()
+        expect(await homePage.getSuccessMessage().isDisplayed()).to.be.true
     })
 
 })

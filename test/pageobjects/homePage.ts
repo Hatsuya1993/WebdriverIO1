@@ -27,6 +27,7 @@ class HomePage {
     private readonly submitButton : WebdriverIO.Element
     private readonly twoBinding : WebdriverIO.Element
     private readonly bottom : WebdriverIO.Element
+    private readonly successMessage : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -56,6 +57,7 @@ class HomePage {
         this.submitButton = this.$main.$("[type='submit']")
         this.twoBinding = this.$main.$("h4 input[name='name']")
         this.bottom = this.$main.$("p.m-0.text-center.text-white")
+        this.successMessage = this.$main.$(".alert.alert-success.alert-dismissible")
     }
 
     navigateTo() : void {
@@ -141,6 +143,9 @@ class HomePage {
     }
     getBottom() : WebdriverIO.Element {
         return this.bottom
+    }
+    getSuccessMessage() : WebdriverIO.Element {
+        return this.successMessage
     }
 }
 
