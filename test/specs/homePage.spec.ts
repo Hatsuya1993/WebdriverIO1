@@ -217,4 +217,9 @@ describe('Home Page Test', () => {
         expect(await homePage.getSuccessMessage().isDisplayed()).to.be.true
     })
 
+    it('Success message is displayed correctly', async () => {
+        await homePage.getSubmitButton().click()
+        expect(await homePage.getSuccessMessage().getText()).to.contain('Success! The Form has been submitted successfully!.')
+    })
+
 })
