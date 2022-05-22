@@ -28,6 +28,7 @@ class HomePage {
     private readonly twoBinding : WebdriverIO.Element
     private readonly bottom : WebdriverIO.Element
     private readonly successMessage : WebdriverIO.Element
+    private readonly successMessageCloseButton : WebdriverIO.Element
 
     constructor(private readonly $main : WebdriverIO.Element = $("body")) {
         this.navbar = this.$main.$(".navbar")
@@ -58,6 +59,7 @@ class HomePage {
         this.twoBinding = this.$main.$("h4 input[name='name']")
         this.bottom = this.$main.$("p.m-0.text-center.text-white")
         this.successMessage = this.$main.$(".alert.alert-success.alert-dismissible")
+        this.successMessageCloseButton = this.$main.$("[data-dismiss='alert']")
     }
 
     navigateTo() : void {
@@ -146,6 +148,9 @@ class HomePage {
     }
     getSuccessMessage() : WebdriverIO.Element {
         return this.successMessage
+    }
+    getSuccessMessageCloseButton() : WebdriverIO.Element {
+        return this.successMessageCloseButton
     }
 }
 

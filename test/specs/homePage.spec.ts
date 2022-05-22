@@ -222,4 +222,11 @@ describe('Home Page Test', () => {
         expect(await homePage.getSuccessMessage().getText()).to.contain('Success! The Form has been submitted successfully!.')
     })
 
+    it('Success message closes when close is clicked', async () => {
+        await homePage.getSubmitButton().click()
+        homePage = new HomePage()
+        await homePage.getSuccessMessageCloseButton().click()
+        expect(await homePage.getSuccessMessage().isDisplayed()).to.be.false
+    })
+
 })
